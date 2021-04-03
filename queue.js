@@ -39,10 +39,20 @@ class Queue {
   }
 }
 
-function peek(queue) {
-  if (!queue.first) return null;
-  console.log(queue.first);
-  return queue.first;
+function peek(q) {
+  if (q.first === null) {
+    return null;
+  } else {
+    return q.first;
+  }
+}
+
+function isEmpty(q) {
+  if (q.first === null) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 function main() {
@@ -52,8 +62,9 @@ function main() {
   starTrekQ.enqueue("Uhura");
   starTrekQ.enqueue("Sulu");
   starTrekQ.enqueue("Checkov");
-  //console.log(JSON.stringify(starTrekQ));
-  peek(starTrekQ);
+  // console.log(JSON.stringify(starTrekQ));
+  console.log(peek(starTrekQ));
+  console.log(isEmpty(starTrekQ));
   //   starTrek.pop();
   //display(starTrek);
   // isEmpty(starTrek);
