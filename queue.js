@@ -38,3 +38,28 @@ class Queue {
     return node.value;
   }
 }
+
+function peek(queue) {
+  if (!queue.first) return null;
+  console.log(queue.first);
+  return queue.first;
+}
+
+function main() {
+  let starTrekQ = new Queue();
+  starTrekQ.enqueue("Kirk");
+  starTrekQ.enqueue("Spock");
+  starTrekQ.enqueue("Uhura");
+  starTrekQ.enqueue("Sulu");
+  starTrekQ.enqueue("Checkov");
+  //console.log(JSON.stringify(starTrekQ));
+  peek(starTrekQ);
+  //   starTrek.pop();
+  //display(starTrek);
+  // isEmpty(starTrek);
+  // console.log(JSON.stringify(starTrek));
+  // console.log(isEmpty(starTrek));
+  // display(starTrek);
+}
+
+main();
